@@ -7,30 +7,28 @@ export const MODELS = [
   { id:"mixtral-8x7b-32768",       name:"Groq Mixtral",    provider:"Groq",      color:"#ec4899", icon:"⚡", apiType:"groq",         apiKey:"" },
 ];
 
-export const API_TYPES = [
-  {value:"anthropic",label:"Anthropic"},
-  {value:"groq",label:"Groq"},
-  {value:"openai_compat",label:"OpenAI-Compatible"},
-  {value:"openai",label:"OpenAI"},
+export const API_TYPE_OPTIONS = [
+  { value:"anthropic",    label:"Anthropic" },
+  { value:"groq",         label:"Groq" },
+  { value:"openai_compat",label:"OpenAI-Compatible" },
+  { value:"openai",       label:"OpenAI" },
 ];
 
-export const SYSTEM_PROMPT = `You are an expert AI coding assistant — like Cursor but smarter and completely free.
-Rules:
-- Always respond with clean, working code when asked
-- Use markdown code blocks with language name
-- Explain briefly
-- Be direct and concise
-- Support all languages
-- When debugging, find the exact problem and fix it
-- If image/file shared, analyze carefully`;
-
-export const LANG_COLORS = { jsx:"#61dafb", css:"#264de4", js:"#f7df1e", html:"#e34f26", json:"#5b8dd9", ts:"#3178c6" };
+export const LANG_COLORS = { jsx: "#61dafb", css: "#264de4", js: "#f7df1e", html: "#e34f26", json: "#5b8dd9", ts: "#3178c6" };
 
 export const TREE_ORDER = [
-  { path:"package.json",             name:"package.json",         type:"file",   depth:0, lang:"json" },
-  { path:"src/",                     name:"src/",                 type:"folder", depth:0 },
-  { path:"src/App.jsx",             name:"App.jsx",              type:"file",   depth:1, lang:"jsx"  },
-  { path:"src/index.css",           name:"index.css",            type:"file",   depth:1, lang:"css"  },
-  { path:"src/components/",         name:"components/",          type:"folder", depth:1 },
-  { path:"src/utils/",              name:"utils/",               type:"folder", depth:1 }
+  { path:"package.json",              name:"package.json",   type:"file",   depth:0, lang:"json" },
+  { path:"src/",                       name:"src/",           type:"folder", depth:0 },
+  { path:"src/App.jsx",               name:"App.jsx",        type:"file",   depth:1, lang:"jsx"  },
+  { path:"src/index.css",             name:"index.css",      type:"file",   depth:1, lang:"css"  },
+  { path:"src/components/",           name:"components/",    type:"folder", depth:1 },
+  { path:"src/components/Sidebar.jsx",         name:"Sidebar.jsx",         type:"file", depth:2, lang:"jsx" },
+  { path:"src/components/MessageBubble.jsx",   name:"MessageBubble.jsx",   type:"file", depth:2, lang:"jsx" },
+  { path:"src/components/AddModelModal.jsx",   name:"AddModelModal.jsx",   type:"file", depth:2, lang:"jsx" },
+  { path:"src/utils/",               name:"utils/",          type:"folder", depth:1 },
+  { path:"src/utils/api.js",         name:"api.js",          type:"file",   depth:2, lang:"js"  },
+  { path:"src/utils/helpers.jsx",    name:"helpers.jsx",     type:"file",   depth:2, lang:"jsx"  },
+  { path:"src/utils/constants.js",   name:"constants.js",    type:"file",   depth:2, lang:"js"  },
 ];
+
+export const SYSTEM_PROMPT = `You are an expert AI coding assistant — like Cursor but smarter and completely free.`;
