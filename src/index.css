@@ -1,0 +1,21 @@
+/* DevMind AI — Global Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  background: #080811;
+  color: #e2e8f0;
+  height: 100vh;
+  overflow: hidden;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #2a2a3a; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a4a; }
+input::placeholder,
+textarea::placeholder { color: #3a3a55; }
+/* Typing animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(0.8); opacity: 0.4; }
+  50%       { transform: scale(1.1); opacity: 1; }
+}
